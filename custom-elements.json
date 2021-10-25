@@ -4,12 +4,12 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "my-element.js",
+      "path": "greet-counter.js",
       "declarations": [
         {
           "kind": "class",
           "description": "An example element.",
-          "name": "MyElement",
+          "name": "GreetCounter",
           "cssParts": [
             {
               "description": "The button",
@@ -100,25 +100,70 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "my-element",
+          "tagName": "greet-counter",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "MyElement",
+          "name": "GreetCounter",
           "declaration": {
-            "name": "MyElement",
-            "module": "my-element.js"
+            "name": "GreetCounter",
+            "module": "greet-counter.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "my-element",
+          "name": "greet-counter",
           "declaration": {
-            "name": "MyElement",
-            "module": "my-element.js"
+            "name": "GreetCounter",
+            "module": "greet-counter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "my-greeting.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SimpleGreeting",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "simple-greeting",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SimpleGreeting",
+          "declaration": {
+            "name": "SimpleGreeting",
+            "module": "my-greeting.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "simple-greeting",
+          "declaration": {
+            "name": "SimpleGreeting",
+            "module": "my-greeting.js"
           }
         }
       ]
